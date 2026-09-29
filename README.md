@@ -1,8 +1,8 @@
 # Research Opportunity Portal 🎓
 
-> **FAST-NUCES Peshawar Campus** | BS (CS 5A) | Fall 2026 | Computer Networks — Assignment #01  
+> **FAST-NUCES Peshawar Campus** | BCS-5A | Fall 2026 | Computer Networks — Assignment #01  
 > **Name:** Syed Muhammad Hussain Hammad  
-> **Reg. No:** *(add your registration number here)*
+> **Roll No:** 24P-0634
 
 A complete web-based application for managing university research opportunities. Built with a **Python REST API** backend, **MySQL** database persistence, and a modern **Bootstrap 5** frontend interface.
 
