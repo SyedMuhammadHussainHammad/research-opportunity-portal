@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+		"name": "Research Opportunity Portal API Tests",
+		"description": "Postman Collection for testing all CRUD operations, status changes, 404 handling, and input validation on the Research Opportunity Portal REST API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create Opportunity #1 (AI Network Optimization)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"AI-Driven Network Traffic Optimization\",\n  \"description\": \"Investigating deep reinforcement learning models for dynamic traffic routing and congestion management in multi-tenant campus networks.\",\n  \"research_area\": \"Artificial Intelligence & Networking\",\n  \"faculty_name\": \"Dr. Aris Thorne\",\n  \"department\": \"Computer Science\",\n  \"required_skills\": \"Python, PyTorch, Mininet, Socket Programming\",\n  \"available_positions\": 3,\n  \"application_deadline\": \"2026-11-30\",\n  \"status\": \"Open\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities"
+					]
+				},
+				"description": "Creates the first sample research opportunity."
+			},
+			"response": []
+		},
+		{
+			"name": "2. Create Opportunity #2 (Quantum Cryptography)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Quantum Cryptography & Key Distribution Protocols\",\n  \"description\": \"Analyzing post-quantum cryptographic primitives and experimental implementation of BB84 protocol simulations in software-defined networks.\",\n  \"research_area\": \"Cybersecurity & Cryptography\",\n  \"faculty_name\": \"Prof. Elena Vance\",\n  \"department\": \"Cyber Security & Software Engineering\",\n  \"required_skills\": \"C++, OpenSSL, Python, Linear Algebra\",\n  \"available_positions\": 2,\n  \"application_deadline\": \"2026-12-15\",\n  \"status\": \"Open\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities"
+					]
+				},
+				"description": "Creates the second sample research opportunity."
+			},
+			"response": []
+		},
+		{
+			"name": "3. Create Opportunity #3 (IoT Energy Monitoring)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"IoT Sensor Networks for Smart Campus Energy Monitoring\",\n  \"description\": \"Designing low-power wireless sensor node topologies using LoRaWAN and MQTT protocols for real-time telemetry analytics.\",\n  \"research_area\": \"Internet of Things & Embedded Systems\",\n  \"faculty_name\": \"Dr. Marcus Brody\",\n  \"department\": \"Electrical & Computer Engineering\",\n  \"required_skills\": \"C/C++, Arduino/ESP32, MQTT, Node.js, Grafana\",\n  \"available_positions\": 4,\n  \"application_deadline\": \"2026-10-25\",\n  \"status\": \"Open\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities"
+					]
+				},
+				"description": "Creates the third sample research opportunity."
+			},
+			"response": []
+		},
+		{
+			"name": "4. Retrieve All Research Opportunities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/opportunities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities"
+					]
+				},
+				"description": "Returns all stored research opportunities in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "5. Retrieve One Research Opportunity (ID: 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/opportunities/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities",
+						"1"
+					]
+				},
+				"description": "Returns full details of a specific research opportunity by its ID."
+			},
+			"response": []
+		},
+		{
+			"name": "6. Update a Research Opportunity (ID: 1)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"AI-Driven Network Traffic Optimization (Updated Version)\",\n  \"description\": \"Expanded research scope to include 5G network slicing optimization using federated learning.\",\n  \"research_area\": \"AI & 5G/6G Wireless Networks\",\n  \"faculty_name\": \"Dr. Aris Thorne\",\n  \"department\": \"Computer Science\",\n  \"required_skills\": \"Python, PyTorch, Mininet, TensorFlow, Docker\",\n  \"available_positions\": 5,\n  \"application_deadline\": \"2026-12-31\",\n  \"status\": \"Open\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities",
+						"1"
+					]
+				},
+				"description": "Updates details such as title, skills, available positions, deadline, and description."
+			},
+			"response": []
+		},
+		{
+			"name": "7. Change Status from Open to Closed (ID: 3)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"Closed\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities",
+						"3"
+					]
+				},
+				"description": "Changes status of opportunity #3 to Closed."
+			},
+			"response": []
+		},
+		{
+			"name": "8. Delete a Research Opportunity (ID: 2)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/opportunities/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities",
+						"2"
+					]
+				},
+				"description": "Deletes opportunity #2 from the database."
+			},
+			"response": []
+		},
+		{
+			"name": "9. Request Deleted Opportunity (Demonstrate 404 Not Found)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/opportunities/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities",
+						"2"
+					]
+				},
+				"description": "Demonstrates a 404 Not Found status code when fetching a deleted opportunity ID."
+			},
+			"response": []
+		},
+		{
+			"name": "10. Invalid Request Payload (Demonstrate 400 Bad Request)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"\",\n  \"faculty_name\": \"Dr. Test\",\n  \"available_positions\": -5\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/opportunities",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"opportunities"
+					]
+				},
+				"description": "Demonstrates input validation failing and returning a 400 Bad Request status."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
