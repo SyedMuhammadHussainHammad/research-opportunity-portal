@@ -158,21 +158,6 @@ The project includes exported test suites in both **Postman** and **Bruno** form
 
 ---
 
-## 📹 1-Minute Demonstration Video Guide
-
-To record the 60-second video submission, follow this time-coded script:
-
-| Time | Action / Demonstration |
-| :--- | :--- |
-| **0:00 - 0:10** | Show backend server running in terminal (`python backend/app.py`) & frontend loading in browser. |
-| **0:10 - 0:20** | Click "+ Post Opportunity", fill in form, and submit to create a new research opportunity. |
-| **0:20 - 0:30** | Show updated list of opportunities and click "View" to display details modal. |
-| **0:30 - 0:40** | Click "Edit", modify positions/deadline, and click "Close" to switch opportunity status to Closed. |
-| **0:40 - 0:50** | Click "Delete" on an opportunity and show instant removal. |
-| **0:50 - 1:00** | Switch to Postman/Bruno: execute request showing 404 response on deleted ID & 400 response on invalid payload. |
-
----
-
 ## 🔒 Security & Best Practices
 - Sensitive configuration is managed via `.env`.
 - Output sanitization is applied on the frontend to prevent XSS.
