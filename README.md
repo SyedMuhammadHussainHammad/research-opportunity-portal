@@ -5,7 +5,7 @@ A complete web-based application for managing university research opportunities.
 ---
 
 ## 📌 Repository Link
-**GitHub Repository:** `https://github.com/username/research-opportunity-portal`
+**GitHub Repository:** `https://github.com/SyedMuhammadHussainHammad/research-opportunity-portal`
 
 ---
 
