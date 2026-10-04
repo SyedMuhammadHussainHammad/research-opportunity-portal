@@ -1,6 +1,10 @@
 # Research Opportunity Portal 🎓
 
-A complete web-based application for managing university research opportunities. Built with a **Python REST API** backend, **MySQL / SQLite** database persistence, and a modern **Bootstrap 5** frontend interface.
+> **FAST-NUCES Peshawar Campus** | BS (CS 5A) | Fall 2026 | Computer Networks — Assignment #01  
+> **Name:** Syed Muhammad Hussain Hammad  
+> **Reg. No:** *(add your registration number here)*
+
+A complete web-based application for managing university research opportunities. Built with a **Python REST API** backend, **MySQL** database persistence, and a modern **Bootstrap 5** frontend interface.
 
 ---
 
@@ -45,8 +49,7 @@ The **Research Opportunity Portal** provides a centralized platform where facult
 research-opportunity-portal/
 ├── backend/
 │   ├── app.py              # Main Flask REST API application & routing
-│   ├── db.py               # Database connector (MySQL / SQLite abstraction)
-│   └── config.py           # Configuration settings
+│   └── db.py               # Database connector (MySQL / SQLite abstraction)
 ├── frontend/
 │   ├── index.html          # Main web application interface
 │   ├── css/
@@ -77,7 +80,7 @@ research-opportunity-portal/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/username/research-opportunity-portal.git
+git clone https://github.com/SyedMuhammadHussainHammad/research-opportunity-portal.git
 cd research-opportunity-portal
 ```
 
